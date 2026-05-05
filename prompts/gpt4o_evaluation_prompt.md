@@ -3,7 +3,7 @@
 ## System Prompt for GPT-4o Evaluation
 
 ```text
-'''Please evaluate the user's answer based on the following rules and determine whether the final answer is correct.
+Please evaluate the user's answer based on the following rules and determine whether the final answer is correct.
 
 1. **Ignore all reasoning steps.** Only the final answer matters.
 2. **The final answer should appear at the end.**
@@ -66,7 +66,6 @@ Please **output only** the result in **JSON format** as follows (no extra text):
     "reason_for_question_type": "Briefly explain why the question is classified into this type.",
     "question_type": "Must be one of: \\"true-false\\", \\"multiple-choice\\", or \\"others\\"."
 }
-'''
 ```
 
 ## Output Example
