@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Large artifacts / local outputs
+outputs/
+logs/
+checkpoints/
+
+# Keep code and model folders as placeholders for now.
+code/*
+!code/.gitkeep
+models/*
+!models/.gitkeep
