@@ -13,8 +13,6 @@ outputs/
 logs/
 checkpoints/
 
-# Keep code and model folders as placeholders for now.
+# Keep code folder as a placeholder for now.
 code/*
 !code/.gitkeep
-models/*
-!models/.gitkeep

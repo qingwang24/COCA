@@ -10,7 +10,6 @@ GitHub: [https://github.com/qingwang24/COCA](https://github.com/qingwang24/COCA)
 COCA/
 ├── README.md
 ├── code/              # Source code placeholder; code will be added later.
-├── models/            # Model files placeholder; models will be added later.
 └── prompts/           # Prompt templates and examples for COCA and evaluation.
     ├── README.md
     ├── coca_prompts.md
@@ -21,7 +20,6 @@ COCA/
 ## Current Status
 
 - `code/`: reserved for future source code.
-- `models/`: reserved for future model checkpoints or model-related assets.
 - `prompts/`: contains prompt templates and output examples used by COCA and GPT-4o evaluation.
 
 ## Prompts
@@ -33,4 +31,4 @@ COCA/
 
 ## Notes
 
-The code and model files are intentionally not included at this stage. Placeholder files are used only to keep the directory structure visible in Git.
+The code files are intentionally not included at this stage. Placeholder files are used only to keep the directory structure visible in Git.
