@@ -29,7 +29,7 @@ COCA/
 
 The main code entry points are summarized in [`code/readme.md`](code/readme.md):
 
-- Iterative reasoning / self-play: `code/cold_start/runner/vllm/self_play.py`
+- Iterative reasoning: `code/cold_start/runner/vllm/self_play.py`
 - Cold-start SFT: `code/cold_start/runner/vllm/train.py`
 - COCA training: `code/coca_train/off_policy_GRPO/grpo_iter_new.py`
 
