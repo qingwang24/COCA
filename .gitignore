@@ -12,7 +12,5 @@ venv/
 outputs/
 logs/
 checkpoints/
-
-# Keep code folder as a placeholder for now.
-code/*
-!code/.gitkeep
+*.log
+*.err

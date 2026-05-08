@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "/dmx-csy-mix01/cog3/permanent/qkchang/miniconda3/envs/swift_ycp/bin/torchrun",
+            "console": "integratedTerminal",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "3,4",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "100"
+            },
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/runner/vllm",
+            "args": [
+                // "--nnodes",
+                // "1",
+                // "--node_rank",
+                // "0",
+                "--nproc_per_node",
+                "2",
+                // "1",
+                // "--master_addr",
+                "--master_port",
+                "6002",
+                
+                // prm, train
+                "train.py",
+                "--deepspeed", "../../ds_config/zero0.json",
+                "--model_name_or_path", "../../libs/configs",
+                "--output_dir", "/dmx-csy-mix01/cog3/permanent/qkchang/shliu19/critique/code/sft/v5/experiments/debug/",
+                "--do_train",
+                "--logging_steps", "5",
+                "--num_train_epochs", "2",
+                // "--max_steps", "120000",
+                "--save_strategy", "steps",
+                "--save_steps", "5",
+                "--per_device_train_batch_size", "1",
+                "--gradient_accumulation_steps", "2",
+                "--per_device_eval_batch_size", "2",
+                "--warmup_ratio", "0.0",
+                "--ddp_find_unused_parameters", "True",
+                "--bf16",
+                "--seed", "20250110"                   
+            ]
+        }
+    ]
+}

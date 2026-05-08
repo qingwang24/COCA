@@ -9,7 +9,10 @@ GitHub: [https://github.com/qingwang24/COCA](https://github.com/qingwang24/COCA)
 ```text
 COCA/
 ├── README.md
-├── code/              # Source code placeholder; code will be added later.
+├── code/              # Source code for cold start and COCA training.
+│   ├── cold_start/    # Cold-start data processing, SFT, and self-play code.
+│   ├── coca_train/    # COCA training and iterative GRPO training code.
+│   └── readme.md      # Quick pointers to key training scripts.
 └── prompts/           # Prompt templates and examples for COCA and evaluation.
     ├── README.md
     ├── coca_prompts.md
@@ -19,8 +22,16 @@ COCA/
 
 ## Current Status
 
-- `code/`: reserved for future source code.
+- `code/`: contains the current implementation for cold-start training and COCA iterative training.
 - `prompts/`: contains prompt templates and output examples used by COCA and GPT-4o evaluation.
+
+## Code
+
+The main code entry points are summarized in [`code/readme.md`](code/readme.md):
+
+- Iterative reasoning / self-play: `code/cold_start/runner/vllm/self_play.py`
+- Cold-start SFT: `code/cold_start/runner/vllm/train.py`
+- COCA training: `code/coca_train/off_policy_GRPO/grpo_iter_new.py`
 
 ## Prompts
 
@@ -31,4 +42,4 @@ COCA/
 
 ## Notes
 
-The code files are intentionally not included at this stage. Placeholder files are used only to keep the directory structure visible in Git.
+Runtime outputs, logs, checkpoints, and local cache files are intentionally excluded from version control.
